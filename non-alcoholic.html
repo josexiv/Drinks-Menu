@@ -21,12 +21,7 @@ body{
   display:flex;align-items:flex-start;justify-content:center;padding:24px;
 }
 
-.sheet::before,.sheet::after,.sheet .corner{
-  content:'';
-  position:absolute;
-  width:46px;height:46px;
-  border:14px double var(--accent);
-  filter:drop-shadow(0 4px 6px rgba(0,0,0,.15));
+
 }
 .sheet::before{top:-14px;left:-14px;border-right:0;border-bottom:0;border-radius:42px 0 0 0;}
 .sheet::after{bottom:-14px;right:-14px;border-left:0;border-top:0;border-radius:0 0 42px 0;}
