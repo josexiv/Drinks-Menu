@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Da Gennaro • Wine List</title>
+<style>
+:root {
+  --ink:#1e1e1e;
+  --muted:#666;
+  --accent:#c8a64d; /* gold */
+  --paper:#ffffff00;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,serif;line-height:1.45;
+  background-image:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,.45)),url(wineshelf.jpg);
+  background-size:cover;background-position:center;background-attachment:fixed;
+  display:flex;align-items:flex-start;justify-content:center;padding:24px;
+}
+.sheet{
+  width:100%;
+  max-width:8.5in;
+  background:var(--paper);
+  border-radius:42px;
+  padding:26px;
+  position:relative;
+  box-shadow:0 20px 50px rgba(0,0,0,.4), inset 0 0 0 6px #fff;
+  border:14px double var(--accent);
+}
+.sheet::before,.sheet::after,.sheet .corner{
+  content:'';
+  position:absolute;
+  width:46px;height:46px;
+  border:14px double var(--accent);
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.15));
+}
+.sheet::before{top:-14px;left:-14px;border-right:0;border-bottom:0;border-radius:42px 0 0 0;}
+.sheet::after{bottom:-14px;right:-14px;border-left:0;border-top:0;border-radius:0 0 42px 0;}
+.sheet .corner{top:-14px;right:-14px;border-left:0;border-bottom:0;border-radius:0 42px 0 0;}
+.sheet .corner.b{bottom:-14px;left:-14px;border-right:0;border-top:0;border-radius:0 0 0 42px;}
+header{text-align:center;padding:4px 10px 0}
+header img.logo{width:min(520px,90%);height:auto;display:block;margin:0 auto}
+header p.sub{
+  margin:6px 0 0;
+  color:var(--muted);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:13px;
+  text-align:center; /* centered subtitle */
+}
+nav{text-align:center;margin:10px 0 0}
+nav a.home{display:inline-block;padding:8px 18px;background: #8a6d1f;color:#fff;text-decoration:none;border-radius:6px;font-weight:700}
+main{padding:16px 0 8px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:960px){.grid{grid-template-columns:1fr 1fr}}
+section.block{background:#fff;border:1px solid #f0e6ca;border-radius:16px;padding:14px}
+h2{
+  margin:0 0 12px;
+  font-size:20px;
+  font-weight:900;
+  color:#fff;
+  background:linear-gradient(90deg,#b98b28,var(--accent));
+  padding:10px 12px;
+  border-radius:10px;
+  box-shadow:0 6px 14px rgba(0,0,0,.12);
+  text-align:center; /* centered section titles */
+}
+/* Align wine items with prices on the right */
+ul {list-style:none;margin:0;padding:0}
+ul li{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  padding:10px 0;
+  border-bottom:1px dashed #ead9bf;
+  background:linear-gradient(180deg,#fff, #fff8e8);
+}
+ul li:last-child{border-bottom:0}
+ul li .name{font-weight:600}
+ul li .meta{margin-left:6px;color:#666;font-size:13px}
+ul li .price{
+  text-align:right;
+  min-width:50px;
+  font-variant-numeric:tabular-nums;
+  font-weight:900;
+  text-shadow:0 1px 0 #fff, 0 0 8px rgba(200,166,77,.4);
+}
+footer{text-align:center;color:#666;font-size:12px;padding:8px 6px 12px}
+@page{size:Letter;margin:0.5in}
+@media print{body{background:#fff !important;background-image:none !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet{box-shadow:none;background:#fff}}
+@media (max-width:600px){
+  body{ background-size:contain;background-repeat:no-repeat;background-color:#111;}
+  .grid{grid-template-columns:1fr}
+  .title{font-size:16px}
+  .desc{font-size:12px}
+}
+</style>
+<style>
+    body p, body li, body div, body span { text-align: left; }
+</style>
+<style>
+    .price { font-weight: lighter; }
+</style>
+</head>
+<body>
+<div class="sheet">
+<header>
+<img alt="Da Gennaro Ristorante Italiano" class="logo" src="logo white dg.png"/>
+<nav style="text-align:center; margin: 10px 0 0;">
+<a href="index.html" style="
+        display:inline-block;
+        padding:8px 18px;
+        margin:6px auto;
+        background:#c8a64d;
+        color:#fff;
+        font-weight:600;
+        text-decoration:none;
+        border-radius:6px;
+        font-size:15px;
+      ">Home</a>
+</nav>
+</header>
+<main>
+<div class="grid">
+<section class="block">
+<h2>Imported White Wines</h2>
+<ul>
+<li><div><span class="name">Gavi di Gavi, Conti Speroni</span> <span class="meta">Mombaruzzo, Italy</span></div><div class="price">67</div></li>
+<li><div><span class="name">Bardolino Rosé, Zeni</span> <span class="meta">Bardolino, Italy</span></div><div class="price">56</div></li>
+<li><div><span class="name">Reserve Willm</span> <span class="meta">Alsace, France</span></div><div class="price">58</div></li>
+<li><div><span class="name">Pinot Grigio, St. Michael‑Eppan</span> <span class="meta">Alto Adige, Italy</span></div><div class="price">72</div></li>
+<li><div><span class="name">Pinot Grigio, Mezzacorona</span> <span class="meta">Trentino, Italy</span></div><div class="price">60</div></li>
+<li><div><span class="name">Sauvignon Blanc, Sheep Creek</span> <span class="meta">New Zealand</span></div><div class="price">64</div></li>
+<li><div><span class="name">Vermentino, Castellani</span> <span class="meta">Tuscany, Italy</span></div><div class="price">60</div></li>
+<li><div><span class="name">Falanghina del Sannio, Janare</span> <span class="meta">Campania, Italy</span></div><div class="price">58</div></li>
+</ul>
+</section>
+<section class="block">
+<h2>Domestic White Wines</h2>
+<ul>
+<li><div><span class="name">Chardonnay, Rodney Strong</span> <span class="meta">Sonoma</span></div><div class="price">69</div></li>
+<li><div><span class="name">Chardonnay, Estate</span> <span class="meta">Willamette Valley, Oregon</span></div><div class="price">92</div></li>
+<li><div><span class="name">Sauvignon Blanc, Oberon</span> <span class="meta">Napa Valley, California</span></div><div class="price">76</div></li>
+</ul>
+</section>
+<section class="block">
+<h2>Imported Red Wines</h2>
+<ul>
+<li><div><span class="name">Chianti Riserva, Ruffino</span> <span class="meta">Pontassieve, Italy</span></div><div class="price">75</div></li>
+<li><div><span class="name">Chianti Classico Riserva, Brolio</span> <span class="meta">Tuscany, Italy</span></div><div class="price">92</div></li>
+<li><div><span class="name">Sangiovese, Val Di Toro (Organic)</span> <span class="meta">Tuscany, Italy</span></div><div class="price">65</div></li>
+<li><div><span class="name">Sangiovese, Cavalier</span> <span class="meta">Tuscany, Italy</span></div><div class="price">58</div></li>
+<li><div><span class="name">Sangiovese Syrah, Sasyr</span> <span class="meta">Tuscany, Italy</span></div><div class="price">82</div></li>
+<li><div><span class="name">Sangiovese, Tuscan Flask, Borgese</span> <span class="meta">Italy</span></div><div class="price">56</div></li>
+<li><div><span class="name">Montepulciano, Brunellesco</span> <span class="meta">Abruzzo, Italy</span></div><div class="price">16/56</div></li>
+<li><div><span class="name">Merlot, Bordeaux</span> <span class="meta">Bordeaux, France</span></div><div class="price">60</div></li>
+<li><div><span class="name">Super Tuscan, La Cattura</span> <span class="meta">Tuscany, Italy</span></div><div class="price">65</div></li>
+<li><div><span class="name">Valpolicella Ripasso, Zeni</span> <span class="meta">Veneto, Italy</span></div><div class="price">75</div></li>
+<li><div><span class="name">Barbera d’Alba, Terre del Barolo</span> <span class="meta">Piemonte, Italy</span></div><div class="price">61</div></li>
+<li><div><span class="name">Barolo, Terre D’bo</span> <span class="meta">Piemonte, Italy</span></div><div class="price">95</div></li>
+<li><div><span class="name">Amarone, Zeni</span> <span class="meta">Veneto, Italy</span></div><div class="price">120</div></li>
+<li><div><span class="name">Brunello di Montalcino, La Lecciaia</span> <span class="meta">Tuscany, Italy</span></div><div class="price">125</div></li>
+<li><div><span class="name">Malbec, BenMarco</span> <span class="meta">Mendoza, Argentina</span></div><div class="price">68</div></li>
+<li><div><span class="name">Primitivo di Manduria</span> <span class="meta">Puglia, Italy</span></div><div class="price">90</div></li>
+</ul>
+</section>
+<section class="block">
+<h2>Domestic Red Wines</h2>
+<ul>
+<li><div><span class="name">Pinot Noir, Duxinaro</span> <span class="meta">Monterey</span></div><div class="price">65</div></li>
+<li><div><span class="name">Pinot Noir, Robert Mondavi</span> <span class="meta">Napa Valley</span></div><div class="price">75</div></li>
+<li><div><span class="name">Pinot Noir, Whole Cluster</span> <span class="meta">Willamette Valley, Oregon</span></div><div class="price">78</div></li>
+<li><div><span class="name">Zinfandel, McNab Ridge Winery</span> <span class="meta">Mendocino County</span></div><div class="price">70</div></li>
+<li><div><span class="name">Cabernet Sauvignon, Oberon</span> <span class="meta">Napa County</span></div><div class="price">79</div></li>
+<li><div><span class="name">Merlot, Rodney Strong</span> <span class="meta">Sonoma</span></div><div class="price">69</div></li>
+</ul>
+</section>
+<section class="block" style="grid-column: 1 / -1;">
+<h2>Sparkling Wine &amp; Champagne</h2>
+<ul>
+<li><div><span class="name">Rosé Sparkling, Rivarose</span> <span class="meta">Provence, France</span></div><div class="price">65</div></li>
+<li><div><span class="name">Lambrusco</span> <span class="meta">Emilia Romagna, Italy</span></div><div class="price">55</div></li>
+<li><div><span class="name">Moscato, Villa Jolanda</span> <span class="meta">Piemonte, Italy</span></div><div class="price">16/56</div></li>
+<li><div><span class="name">Prosecco, Monforte</span> <span class="meta">Veneto, Italy</span></div><div class="price">16/56</div></li>
+</ul>
+</section>
+</div>
+</main>
+<footer></footer>
+</div>
+</body>
+</html>

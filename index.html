@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Da Gennaro – Menus</title>
+  <style>
+    :root{
+      --brand:#9d0404;          /* deep red */
+      --ink:#1f1f1f;            /* text */
+      --rule:#d9c48b;           /* gold border */
+      --tile:#e7ca8ce8;           /* button/tile bg */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+
+    /* Background wine photo */
+    body{
+      font-family: Georgia, "Times New Roman", serif;
+      color:var(--ink);
+      background:url("wine pooring.jpg") no-repeat center center fixed;
+      background-size:cover;
+      position:relative;
+    }
+
+    /* Overlay + vignette */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at center,
+          rgba(255,255,240,0.) 60%,
+          rgba(0,0,0,0.4) 100%);
+      z-index:0;
+    }
+
+    .wrap{max-width:900px;margin:0 auto;padding:28px 16px;position:relative;z-index:1;}
+
+    /* Header */
+    header{text-align:center;margin:6px 0 18px}
+    header img{max-width:400px;width:80%;height:auto;margin:8px auto 0;display:block}
+    h1{margin:10px 0 0;color:var(--brand);font-size:32px;letter-spacing:.4px}
+
+    /* Button grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:16px;
+      margin:18px auto 8px;
+    }
+    a.tile{
+      display:block;
+      padding:16px 14px;
+      text-decoration:none;
+      color:var(--ink);
+      background:var(--tile);
+      border:1px solid var(--rule);
+      border-radius:14px;
+      font-weight:800;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(120, 119, 119, 0.679);
+      transition:transform .06s ease, box-shadow .12s ease, border-color .12s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a.tile:hover, a.tile:focus{
+      outline:none;
+      border-color:#b38f3a;
+      box-shadow:0 4px 16px rgba(246, 200, 49, 0.4);
+      transform:translateY(-1px);
+    }
+    a.tile:active{transform:translateY(0)}
+    .sub{margin:8px 0 0;color:#d9cbcb;font-size:14px;text-align:center}
+
+    /* Footer */
+    .footer{margin:22px 0 6px;text-align:center;font-size:12px;color:#6b6b6b}
+
+    /* Mobile */
+    @media (max-width:640px){
+      header img{max-width:260px}
+      h1{font-size:28px}
+      .grid{grid-template-columns:1fr;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="logo white dg.png" alt="Da Gennaro Logo">
+      <h1>Menus</h1>
+      <p class="sub">Tap a menu below</p>
+    </header>
+
+    <main class="grid" aria-label="Menu Categories">
+      <a class="tile" href="wine-bottle2.html">Wine by Bottle</a>
+      <a class="tile" href="wine-glass.html">Wine by Glass</a>
+      <a class="tile" href="Beers.html">Beers</a>
+      <a class="tile" href="non-alcoholic.html">Non-Alcoholic</a>
+      <a class="tile" href="coffe tea.html">Coffee Tea</a>
+      <a class="tile" href="cocktails.html">Cocktails</a>
+    </main>
+
+    <div class="footer">© Da Gennaro</div>
+  </div>
+</body>
+</html>

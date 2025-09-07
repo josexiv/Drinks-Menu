@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Da Gennaro • Beers</title>
+<style>
+:root {
+  --ink:#1e1e1e;
+  --muted:#666;
+  --accent:#c8a64d; /* gold */
+  --paper:#ffffff00;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,serif;line-height:1.45;
+  background-image:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,.45)),url(glassbeer.jpg);
+   background-size:cover;background-position:center;background-attachment:fixed;
+  display:flex;align-items:flex-start;justify-content:center;padding:24px;
+}
+/* VERY VISIBLE ORNAMENTAL BORDER */
+.sheet{
+  width:100%;
+  max-width:8.5in;
+  background:var(--paper);
+  border-radius:42px;
+  padding:26px;
+  position:relative;
+  box-shadow:0 20px 50px rgba(0,0,0,.4), inset 0 0 0 6px #fff;
+  border:14px double var(--accent);
+}
+.sheet::before,.sheet::after,.sheet .corner{
+  content:'';
+  position:absolute;
+  width:46px;height:46px;
+  border:14px double var(--accent);
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.15));
+}
+.sheet::before{top:-14px;left:-14px;border-right:0;border-bottom:0;border-radius:42px 0 0 0;}
+.sheet::after{bottom:-14px;right:-14px;border-left:0;border-top:0;border-radius:0 0 42px 0;}
+.sheet .corner{top:-14px;right:-14px;border-left:0;border-bottom:0;border-radius:0 42px 0 0;}
+.sheet .corner.b{bottom:-14px;left:-14px;border-right:0;border-top:0;border-radius:0 0 0 42px;}
+header{text-align:center;padding:4px 10px 0}
+header img.logo{width:min(520px,90%);height:auto;display:block;margin:0 auto}
+header p.sub{margin:6px 0 0;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+nav{text-align:center;margin:10px 0 0}
+nav a.home{display:inline-block;padding:8px 18px;background: #8a6d1f;color:#fff;text-decoration:none;border-radius:6px;font-weight:700}
+main{padding:16px 0 8px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:960px){.grid{grid-template-columns:1fr 1fr}}
+section.block{background:#fff;border:1px solid #f0e6ca;border-radius:16px;padding:14px}
+h2{margin:0 0 12px;font-size:20px;font-weight:900;color:#fff;background:linear-gradient(90deg,#b98b28,var(--accent));padding:10px 12px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.12)}
+ul.list{list-style:none;margin:0;padding:0}
+ul.list li{padding:10px 0;border-bottom:1px dashed #ead9bf;background:linear-gradient(180deg,#fff, #fff8e8)}
+ul.list li:last-child{border-bottom:0}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:baseline}
+.title{font-weight:800;font-size:17px}
+.dots{height:1px;border-bottom:1px dotted #c7b071;align-self:stretch;margin:0 6px}
+.price{font-variant-numeric:tabular-nums;font-weight:900;text-shadow:0 1px 0 #fff, 0 0 8px rgba(200,166,77,.4)}
+.desc{color:#5b4c2a;margin-top:2px;font-size:13px}
+footer{text-align:center;color:#666;font-size:12px;padding:8px 6px 12px}
+@page{size:Letter;margin:0.5in}
+@media print{body{background:#fff !important;background-image:none !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sheet{box-shadow:none;background:#fff}}
+@media (max-width:600px){
+  body{ background-size:contain;background-repeat:no-repeat;background-color:#111;}
+  .grid{grid-template-columns:1fr}
+  .title{font-size:16px}
+  .desc{font-size:12px}
+}
+.price-banner {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--accent);
+  background: #fff8e81f;
+  padding: 3px 5px;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: inline-block;
+}
+
+</style>
+<style>
+    body p, body li, body div.beer-item, body span.beer-item {
+        text-align: center;
+    }
+    </style></head>
+    
+<body>
+<div class="sheet">
+<header>
+  <img class="logo" src="logo white dg.png" alt="Logo">
+
+<nav><a class="home" href="index.html">Home</a></nav>
+<div class="price-banner">All Beers $9 • Cider $9</div>
+
+</header>
+<main>
+<section class="block">
+<h2>Beers</h2>
+<ul class="list">
+<li>
+<span class="flag">🇮🇹</span>
+<span class="title">Peroni </span>
+<span aria-hidden="true" class="dots"></span>
+<span class="price"></span>
+</li>
+<li>
+<span class="flag">🇮🇹</span>
+<span class="title">Moretti </span>
+<span aria-hidden="true" class="dots"></span>
+
+<li>
+<span class="flag">🇧🇪</span>
+<span class="title">Stella </span>
+<span aria-hidden="true" class="dots"></span>
+
+<li>
+<span class="flag">🇲🇽</span>
+<span class="title">Modelo </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🇺🇸</span>
+<span class="title">Coors Light </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🇲🇽</span>
+<span class="title">Corona </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🇳🇱</span>
+<span class="title">Heineken </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🇺🇸</span>
+<span class="title">Brooklyn Lager </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🇺🇸</span>
+<span class="title">Brooklyn IPA </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+</ul>
+</section>
+<section class="block">
+<h2>Also Available</h2>
+<ul class="list">
+<li>
+<span class="flag">🍎</span>
+<span class="title">Angry Orchard Cider </span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🫚</span>
+<span class="title">Ginger Beer <span class="badge na">N/A</span></span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+<li>
+<span class="flag">🚫🍺</span>
+<span class="title">O’Doul’s <span class="badge na">N/A</span></span>
+<span aria-hidden="true" class="dots"></span>
+
+</li>
+</ul>
+</section>
+</main>
+<footer></footer>
+</div>
+</body>
+</html>
